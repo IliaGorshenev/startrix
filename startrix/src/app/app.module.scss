@@ -1,0 +1,13 @@
+@use "../styles/vars.scss";
+
+.main_container {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 6%;
+    min-width: 100%;
+
+    @media (max-width: (768px - 1px)) {
+        flex-direction: column;
+    }
+}
