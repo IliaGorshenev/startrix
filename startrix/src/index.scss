@@ -1,6 +1,4 @@
-@use "@picocss/pico/scss/pico" with (
-    $theme-color: "blue"
-  );
-@use "./styles/utils/reset.scss";
 @use "./styles/vars.scss";
-@use "./app/app.module.scss";
+@use "./styles/globals.scss";
+@use "./app/App.module.scss";
+

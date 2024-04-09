@@ -1,4 +1,3 @@
-
 $vp-320:                            320px;
 $vp-375: 375px;
 $vp-768: 768px;
@@ -7,7 +6,16 @@ $vp-1366: 1366px;
 $vp-1280: 1280px;
 $vp-1440: 1440px;
 $vp-1920: 1920px;
-  
+
+$main-font: 'Manrope';
+
+$primary: #ff4718;
+$white: #ffffff;
+$gray: #979da5;
+$black: #18232e;
+$light-gray: #f6f6f9;
+$light-red: #fff7f7;
+$main-blue: #1a3fae;
 
 @mixin vp-1919 {
 @media (max-width: ($vp-1920 - 1px)) {
