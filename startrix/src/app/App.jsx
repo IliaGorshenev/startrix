@@ -5,6 +5,7 @@ import Header from "../components/header/Header.jsx";
 import PostService from "../api/api";
 import Select from "../components/select/index.jsx";
 import { useWindowWidth } from "../hooks/useWindowWidth.js";
+import Checkbox from "../components/checkbox/index.jsx";
 
 const cities = [
   "Москва", 
@@ -71,6 +72,7 @@ function App() {
               isOpen={openId === 2}
               opener={()=>(2 === openId ? setId(null) : setId(2))}
             />
+            <Checkbox/>
             <Select 
               mainTitle={"Навыки"} 
               fieldTitle={"Выбрать навыки"} 
