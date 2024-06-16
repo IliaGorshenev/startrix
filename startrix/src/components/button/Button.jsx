@@ -11,7 +11,8 @@ const Button = (
   {
     variant, 
     text,
-    className
+    className,
+    onClick
   }
   ) => {
   const buttonClassName = cn(
@@ -24,7 +25,7 @@ const Button = (
   )
 
   return (
-    <button className={buttonClassName}>
+    <button onClick={onClick} className={buttonClassName}>
       <span className={styles.text}>{text}</span>
     </button>
   )

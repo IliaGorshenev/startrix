@@ -7,7 +7,7 @@ export default class PostService {
     }
     
     static async getAllCandidates() {
-        const response = await axios.get('http://www.andrea7y.beget.tech/api/v1/userlanguage/?format=json&language=JavaScript')
+        const response = await axios.get('http://www.andrea7y.beget.tech/api/v1/userdata/?city=Saint%20Petersburg&job=Backend')
         return response
     }
 }

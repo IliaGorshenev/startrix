@@ -9,7 +9,8 @@ const Select = (
     fieldTitle,
     items,
     isOpen,
-    opener
+    opener,
+    setCity
   }
 ) => {
   const [used, setUsed] = useState([])
@@ -22,18 +23,25 @@ const Select = (
     return sorted
   }
 
-
   const itemHandler = (itemText) => {
     if (!used.length > 0) {
+      setCity && setCity([itemText])
       return setUsed([itemText])
     }
 
-    used.includes(itemText) 
-    ? setUsed(filter(used, itemText))
-    : setUsed([...used, itemText])
-
+    if (used.includes(itemText)) {
+      setCity && setCity(filter(used, itemText))
+      return setUsed(filter(used, itemText))
+    }
+    setCity && setCity([...used, itemText])
+    return setUsed([...used, itemText])
   }
 
+  const findText = function (e) {
+    const li = e.currentTarget
+    const span = li.querySelector('span')
+    itemHandler(span.innerText)
+  }
 
   const arrowDir = isOpen ? styles.arrowUp : styles.arrow;
   return (
@@ -59,7 +67,7 @@ const Select = (
       {used.length > 0 && 
         <div className={styles.chosenList}>
           {used.map((item) => (
-            <div onClick={(e) => {itemHandler(e.target.innerText)}} className={styles.chosenItem}>
+            <div onClick={(e) => {findText(e)}} className={styles.chosenItem}>
               <span className={styles.chosenItemText}>{item}</span>
             </div>
           ))}

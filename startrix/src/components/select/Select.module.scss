@@ -39,13 +39,14 @@
   padding: 6px 0;
   background-color: $white;
   outline: 1px solid $gray;
-
+  max-height: 400px;
+  overflow: scroll;
   position: absolute;
   top: 0;
   left: 110%;
 
   width: 100%;
-  z-index: 5;
+  z-index: 20;
 
   &Item {
     font-weight: 400;
