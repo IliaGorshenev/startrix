@@ -1,13 +1,19 @@
 @import "../../styles/vars.scss";
-
+.header {
+  z-index: 10;
+  display: flex;
+}
 .headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 19px 0;
-
+  padding: 19px 6%;
+  max-width: 1480px;
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
+  margin: 0 auto;
+  z-index: 100;
 }
 
 .nav {
@@ -22,6 +28,12 @@
   }
 }
 
+.logo {
+  font-family: "NT Somic", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #1a3fae;
+}
 .navLink {
   &:hover {
     cursor: pointer;
@@ -31,5 +43,5 @@
 
 .authorisation {
   display: flex;
-  gap: 12px
+  gap: 12px;
 }
